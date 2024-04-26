@@ -1,0 +1,36 @@
+import { Box, Container, Flex, Heading, Image, Link, Text, VStack } from "@chakra-ui/react";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+
+const Index = () => {
+  return (
+    <Box bg="gray.50" minH="100vh" py={20}>
+      <Container maxW="container.lg" px={4}>
+        <Flex justify="center" mb={8}>
+          <Image src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3MTQxMjM0NjF8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Yuntong Zhang" borderRadius="full" boxSize={200} />
+        </Flex>
+        <Heading as="h1" size="xl" mb={4}>
+          Yuntong Zhang
+        </Heading>
+        <Text fontSize="lg" mb={8}>
+          PhD Student at National University of Singapore (NUS)
+        </Text>
+        <VStack spacing={4} align="center">
+          <Link href="mailto:yuntong.zhang@nus.edu.sg" isExternal>
+            <FaEnvelope size={24} />
+            yuntong.zhang@nus.edu.sg
+          </Link>
+          <Link href="https://github.com/yuntongzhang" isExternal>
+            <FaGithub size={24} />
+            GitHub
+          </Link>
+          <Link href="https://linkedin.com/in/yuntongzhang" isExternal>
+            <FaLinkedin size={24} />
+            LinkedIn
+          </Link>
+        </VStack>
+      </Container>
+    </Box>
+  );
+};
+
+export default Index;
